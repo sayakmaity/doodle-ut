@@ -1,0 +1,98 @@
+<!-- top bar in bootstrap that says "Doodle Poll" -->
+<html>
+  <head>
+    <title>Doodle Poll</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="jumbotron">
+        <h1>Doodle Poll</h1>
+      </div>
+
+      <div id="screen1">
+        <table class="table table-bordered">
+          <!-- Creating the header for the table. -->
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Monday 9am</th>
+              <th>Monday 10am</th>
+              <th>Wednesday 9am</th>
+              <th>Thursday 10am</th>
+              <th>Thursday 11am</th>
+            </tr>
+          </thead>
+          <!-- This is the table that the user will fill out. -->
+          <tbody>
+            <tr>
+              <td id="myName" contenteditable="true" onclick="$(this).focus();">
+                Enter Name
+              </td>
+              <td onclick="checkClick(0)" id="0">click to change</td>
+              <td onclick="checkClick(1)" id="1">click to change</td>
+              <td onclick="checkClick(2)" id="2">click to change</td>
+              <td onclick="checkClick(3)" id="3">click to change</td>
+              <td onclick="checkClick(4)" id="4">click to change</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- add button -->
+      <div>
+        <button
+          type="button"
+          class="btn btn-primary"
+          onclick="addEL()"
+          id="submit"
+        >
+          Submit
+        </button>
+      </div>
+      
+
+      <div>
+        <!-- This is the table that will be displayed that contains all the information. -->
+        <table class="table table-bordered" id="mainTable">
+          <thead>
+            <tr>
+              <th contenteditable="true">Name</th>
+              <th>Monday 9am</th>
+              <th>Monday 10am</th>
+              <th>Wednesday 9am</th>
+              <th>Thursday 10am</th>
+              <th>Thursday 11am</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Sayak</td>
+              <td>no</td>
+              <td>no</td>
+              <td>maybe</td>
+              <td>yes</td>
+              <td>no</td>
+            </tr>
+            <tr>
+              <td>Steve</td>
+              <td>yes</td>
+              <td>yes</td>
+              <td>yes</td>
+              <td>no</td>
+              <td>maybe</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
