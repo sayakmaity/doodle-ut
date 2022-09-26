@@ -24,7 +24,6 @@ function addEL() {
   var row = mainTable.insertRow();
 
   // add cells to the row so that we can add the user's name/availability
-  // to each of them
   var cell1 = row.insertCell(0);
   var cell2 = row.insertCell(1);
   var cell3 = row.insertCell(2);
@@ -32,14 +31,7 @@ function addEL() {
   var cell5 = row.insertCell(4);
   var cell6 = row.insertCell(5);
 
-  // add the user's availability to this row based on what they
-  // input into each of the cells submitted
-
-  // set the text of the first cell to the user's name
-  cell1.textContent = document.getElementById("myName").value;
-  console.log(cell1.textContent);
-  //
-  /* Creating a new table row and adding a new cell to it. */
+  // add the user's availability to the main table based on what they selected in upper table
   cell1.innerHTML = document.getElementById("myName").textContent;
   cell2.innerHTML = document.getElementById("0").textContent;
   cell3.innerHTML = document.getElementById("1").textContent;
